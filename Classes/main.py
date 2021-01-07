@@ -1,0 +1,35 @@
+from mashine.car import Car
+from mashine.Cargo import Cargo
+from mashine.Passenger import Passenger
+
+noname = Car("From Factory")
+print(noname.last_name + " " + noname.first_name)
+noname.drive()
+noname.can_transport_cargo()
+noname.can_transport_pessenger()
+
+lada = Passenger("lada")
+print(lada.first_name + " " + lada.last_name)
+lada.drive()
+lada.can_transport_cargo()
+lada.can_transport_passenger()
+print(lada.body)
+print(lada.engine)
+print(lada.shassis)
+print(lada.transmission)
+lada.color("red")
+print(lada.weight_over_3_tons)
+
+kamaz = Cargo("Kamaz")
+print(kamaz.first_name + " " + kamaz.last_name)
+kamaz.drive()
+kamaz.can_transport_cargo()
+kamaz.can_transport_passenger()
+print(kamaz.body)
+print(kamaz.engine)
+print(kamaz.shassis)
+print(kamaz.transmission)
+print(kamaz.min)
+print(kamaz.max)
+kamaz.color("Orange")
+print(kamaz.weight_over_3_tons)
