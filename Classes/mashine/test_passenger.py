@@ -1,27 +1,28 @@
 import unittest
-from mashine.Passenger import Passenger
+from mashine.Passenger import Passengers
 
 class TestCar(unittest.TestCase):
     def test_weight_over_3_tons(self):
-        Passenger.__init__(Passenger, "Oda", "Pessenger", "pessenger", "gasoline", "front_wheel", "manual", True)
-        first = Passenger.weight_over_3_tons
-        print(Passenger.weight_over_3_tons)
-        Passenger.weight_over_3_tons = False
-        print(Passenger.weight_over_3_tons)
-        second = Passenger.weight_over_3_tons
-        Passenger.can_transport_pessenger(Passenger)
-        Passenger.can_transport_cargo(Passenger)
+        Passengers.__init__(Passengers, "Oda", "Pessengers", "pessengers", "gasoline", "front_wheel", "manual", True)
+        first = Passengers.weight_over_3_tons
+        print(Passengers.weight_over_3_tons)
+        Passengers.weight_over_3_tons = False
+        print(Passengers.weight_over_3_tons)
+        second = Passengers.weight_over_3_tons
+        Passengers.can_transport_pessengers(Passengers)
+        Passengers.can_transport_cargo(Passengers)
         self.assertEqual(first, second)
 
     def test_color(self):
         first = input("First Car Color: ")
         second = input("Inter Word to Compare: ")
-        Passenger.color(Passenger, first)
-        self.assertNotEqual(first, int)
-        self.assertNotEqual(first, None)
-        self.assertNotEqual(first, float)
-        self.assertNotEqual(first, list)
+        Passengers.color(Passengers, first)
         self.assertEqual(first, second)
+
+    #def test_weight(self):
+        #first = input("Inter Word to Compare: ")
+        #Passengers.change_weight(Passengers, first)
+        #self.assertEqual(first, True)
 
 if __name__ == '__name__':
     unittest.main()

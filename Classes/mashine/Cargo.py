@@ -3,10 +3,12 @@ from mashine.car import Car
 
 
 class Cargo(Car):
-    def __init__(self, first_name, last_name="Cargo Car", body="cargo", engine="diesel", shassis="four_wheel",
+    """Класс Грузовая(Машина)"""
+    def __init__(self, car_name, class_name="Cargo Car", body="cargo", engine="diesel", shassis="four_wheel",
                  transmission="auto", weight_over_3_tons=True):
-        self.first_name = first_name
-        self.last_name = last_name
+        super().__init__(car_name, class_name)
+        self.car_name = car_name
+        self.class_name = class_name
         self.body = body
         self.engine = engine
         self.shassis = shassis
@@ -33,11 +35,22 @@ class Cargo(Car):
         else:
             print("The car can`t transporting cargo.")
 
-    def can_transport_passenger(self):
+    def can_transport_passengers(self):
         if self.weight_over_3_tons:
             print("The car can`t transporting pessengers.")
         else:
             print("The car can transporting pessengers.")
+
+    def change_assembly(self, engine, shassis, transmission):
+        self.engine = engine
+        self.shassis = shassis
+        self.transmission = transmission
+
+    def change_transporting_type(self, body):
+        self.body = body
+
+    def change_weight(self, weight_over_3_tons=bool):
+        self.weight_over_3_tons = weight_over_3_tons
 
     def color(self, color):
         self.color = color

@@ -5,7 +5,7 @@ class TestCar(unittest.TestCase):
     def test_chance_to_drive(self):
         Cargo.__init__(Cargo, "Gaz", "Cargo", "cargo", "gasoline", "four_wheel", "manual", True)
         Cargo.drive(Cargo)
-        print(Cargo.first_name + " " + Cargo.last_name)
+        print(Cargo.car_name + " " + Cargo.class_name)
         print(Cargo.body)
         print(Cargo.engine)
         print(Cargo.shassis)
@@ -14,7 +14,7 @@ class TestCar(unittest.TestCase):
         print(Cargo.max)
         Cargo.__init__(Cargo, "Maz", "Cargo", "cargo", "diesel", "four_wheel", "auto", True)
         Cargo.drive(Cargo)
-        print(Cargo.first_name + " " + Cargo.last_name)
+        print(Cargo.car_name + " " + Cargo.class_name)
         print(Cargo.body)
         print(Cargo.engine)
         print(Cargo.shassis)
@@ -27,7 +27,7 @@ class TestCar(unittest.TestCase):
         first = Cargo.weight_over_3_tons
         Cargo.weight_over_3_tons = False
         second = Cargo.weight_over_3_tons
-        Cargo.can_transport_pessenger(Cargo)
+        Cargo.can_transport_pessengers(Cargo)
         Cargo.can_transport_cargo(Cargo)
         self.assertEqual(first, second)
 
