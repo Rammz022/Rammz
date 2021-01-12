@@ -1,4 +1,4 @@
-from mashine.car import Car
+from mashine.Car import Car
 
 Car.top_transport(Car)
 
@@ -9,7 +9,7 @@ while True:
     list = input("Car: ")
     if list == 'q':
         break
-    Car.store_top_list(Car, list)
+    Car.store_top_answer(Car, list)
 
 print("\n Thanks for you top")
-Car.show_top_list(Car)
+Car.show_top_answers(Car)
